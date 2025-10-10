@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="monitor-signature" content="monitor:player:html5">
+    <meta property="og:image" content="files/shot.png" />
+    <meta property="og:title" content="Shalawat Kubro" />
+    <meta property="og:description" content="Shalawat Kubro" />
+    <meta name="og:image" content="files/shot.png" />
+    <link rel="image_src" href="files/shot.png" />
+    <meta name="Description" content="Shalawat Kubro">
+    <title>Shalawat Kubro</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/player.css" />
+    <link rel="stylesheet" href="style/phoneTemplate.css" />
+    <script src="javascript/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+    <!-- <input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" /> -->
+<!--     <dir style="visibility: hidden;">
+        <input type="checkbox" id="like" onclick="onClickFavourite()" />
+        <label for="like" id="like_label">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32c-5.15-4.67-8.55-7.75-8.55-11.53 0-3.08 2.42-5.5 5.5-5.5 1.74 0 3.41.81 4.5 2.09 1.09-1.28 2.76-2.09 4.5-2.09 3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54l-1.45 1.31z" />
+            </svg>
+        </label>
+    </dir>
+    <dir style="visibility: hidden;">
+        <p id="app_title">Al Quran (Hafizi 15 lines)</p>
+    </dir> -->
+    <script src="javascript/config.js"></script>
+    <script src="javascript/LoadingJS.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/editor.js"></script>
+    <script src="files/search/book_config.js"></script>
+    <link rel="stylesheet" href="style/template.css" />
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-00000000-0']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+        var sendvisitinfo = function (type, page) { };
+    </script>
+    <script src="javascript/MovingBackgrounds.min.js"></script>
+    <link rel="stylesheet" href="style/MovingBackgrounds.min.css" />
+    <script src="javascript/flipHtml5.hiSlider2.min.js"></script>
+    <link rel="stylesheet" href="style/hiSlider2.min.css" />
+    <script src="slide_javascript/slideJS.js"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+         onFlipSound();
+        // global.phoneGotoPagePanel.showOrHide();
+        // addFavouriteButton();
+        document.getElementById("menu").style.visibility = "hidden";
+    //     var element = document.getElementById("menu");
+  		// element.classList.add("tipsBoxShadow");
+    //     var element2 = document.getElementById("topBar");
+  		// element2.classList.add("tipsBoxShadow");
+    };
+
+    // function addFavouriteButton() {
+    //     var dom1 = document.getElementById("like");
+    //     document.getElementById("topBar").appendChild(dom1);
+    //     var dom2 = document.getElementById("like_label");
+    //     document.getElementById("topBar").appendChild(dom2);
+    //     var dom3 = document.getElementById("app_title");
+    //     document.getElementById("topBar").appendChild(dom3);
+    // }
+    var page_no = 1;
+    window.onhashchange = function() {
+        var str = window.location.hash;
+        var res = str.split("#p=");
+        page_no = res[1];
+        // document.getElementById("demo").innerHTML = res[1];
+        // alert("HASH CHANGED - new has " + page_no);
+        Android.showToast(res[1]);
+    }
+    function onFlipSound() {
+        bookConfig.FlipSound = true;
+    }
+    function offFlipSound() {
+        bookConfig.FlipSound = false;
+    }
+    // function showMenu() {
+    //     document.getElementById("menu").style.visibility = "visible";
+    // }
+    // function hideMenu() {
+    //     document.getElementById("menu").style.visibility = "hidden";
+    // }
+
+    // function onClickFavourite() {
+    //     var checkBox = document.getElementById("like");
+    //     if (checkBox.checked == true) {
+    //         Android.showToast("yes");
+    //     } else {
+    //         Android.showToast("no");
+    //     }
+    // }
+
+    // function showAndroidToast(toast) {
+    //     Android.showToast(toast);
+    // }
+    </script>
+</body>
+
+</html>

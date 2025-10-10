@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/primary" />
+    <item>
+        <inset
+            android:drawable="@mipmap/ic_launcher"
+            android:insetBottom="32dp"
+            android:insetLeft="32dp"
+            android:insetRight="32dp"
+            android:insetTop="32dp" />
+    </item>
+</layer-list>
